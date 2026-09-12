@@ -95,7 +95,7 @@ app.get('/health', (_req, res) => {
 app.use(
   '/video',
   express.static(UPLOADS_DIR, {
-    fallthrough: false,
+    fallthrough: true,
     acceptRanges: true,
     cacheControl: true,
     maxAge: '10m',
